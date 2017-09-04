@@ -15,4 +15,17 @@
     <packaging>jar</packaging>
     <version>1.0.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.jund.framework</groupId>
+            <artifactId>app-cloud-framework-jpa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jund.framework</groupId>
+            <artifactId>app-cloud-framework-mvc</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
 </project>
