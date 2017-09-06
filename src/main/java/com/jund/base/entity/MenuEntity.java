@@ -1,6 +1,6 @@
 package com.jund.base.entity;
 
-import com.jund.framework.jpa.base.BaseEntity;
+import com.jund.framework.jpa.base.entity.BaseEntity;
 
 import java.io.Serializable;
 

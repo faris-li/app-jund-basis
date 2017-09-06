@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.jund.base</groupId>
-    <artifactId>app-cloud-base-service</artifactId>
+    <artifactId>app-cloud-base-api</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
 
