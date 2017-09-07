@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: security-service
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    poolType: c3p0
+#c3p0配置
+    maxIdleTime: 60
+    maxPoolSize: 100
+    minPoolSize: 3
+    acquireIncrement: 3
+    numHelperThreads: 3
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: h2
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#################################################################

@@ -1,13 +1,18 @@
 package com.jund.base.repository;
 
-import com.jund.base.entity.MenuEntity;
 import com.jund.framework.jpa.base.repository.BaseRepository;
+import com.jund.platformwork.security.model.Menu;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
-/**
- * Created by zhijund on 2017/9/2.
- */
-public interface MenuRepository extends BaseRepository<MenuEntity, Long> {
+import java.util.List;
 
-    MenuEntity findMenuByMenuCode(String menuCode);
+@Repository
+public interface MenuRepository extends BaseRepository<Menu, Long> {
 
+	Menu findMenuByMenuCode(String menuCode);
+	
+	@Query("select m from Menu m where m.app.id = :appId order by m.sortNo asc ")
+	List<Menu> findByAppId(@Param("appId") Long appId);
 }

@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+    config:
+      profile: dev
+      discovery:
+        service-id: config-server
+        enabled: true
+  application:
+    name: security-service
+#####################################################
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://discovery/eureka
+#################################################################
+logging:
+  level:
+    org.springframework.security: DEBUG
+#####################################################
