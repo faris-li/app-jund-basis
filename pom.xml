@@ -10,8 +10,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <groupId>com.vpcloud.base</groupId>
-    <artifactId>app-cloud-base-api</artifactId>
+    <groupId>com.vpcloud.basic</groupId>
+    <artifactId>app-cloud-basic</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
 
