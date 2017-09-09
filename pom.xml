@@ -3,9 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-        <module>app-jund-basic-core</module>
-    </modules>
 
     <parent>
         <groupId>com.jund.parent</groupId>
@@ -13,95 +10,23 @@
         <version>1.0.0</version>
     </parent>
 
-    <groupId>com.jund.basic</groupId>
-    <artifactId>app-cloud-basic</artifactId>
+    <groupId>com.jund.basis</groupId>
+    <artifactId>app-jund-basis</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.jund.framework</groupId>
-            <artifactId>app-cloud-framework-security</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jund.framework</groupId>
-            <artifactId>app-cloud-framework-jpa</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jund.platformwork</groupId>
-            <artifactId>app-cloud-log-model</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jund.platformwork</groupId>
-            <artifactId>app-cloud-security-model</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jund.log</groupId>
-            <artifactId>app-cloud-log-remote-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jund.param</groupId>
-            <artifactId>app-cloud-param-remote-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-         <dependency>
-            <groupId>com.jund.framework</groupId>
-            <artifactId>app-cloud-framework-testcase</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>app-jund-basis-core</module>
+        <module>app-jund-basis-apis</module>
+    </modules>
 
     <build>
         <defaultGoal>install</defaultGoal>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
             </plugin>
         </plugins>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <executable>true</executable>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 </project>
