@@ -4,8 +4,8 @@ package com.jund.basis.apis;
 import com.jund.basis.apis.form.AppForm;
 import com.jund.basis.core.entity.App;
 import com.jund.basis.core.service.AppService;
+import com.jund.framework.core.Const;
 import com.jund.framework.core.annotation.Logger;
-import com.jund.framework.core.exception.JundRuntimeException;
 import com.jund.framework.mvc.RestConst;
 import com.jund.framework.mvc.base.BaseResource;
 import com.jund.framework.mvc.response.ResponseInfo;
@@ -84,7 +84,7 @@ public class AppResource extends BaseResource {
 	@PostMapping
 	public ResponseInfo save(@RequestBody App app) {
 		if(app == null ){
-			throw new RestException(RestConst.ReturnCode.ERROR, "应用为空!");
+			throw new RestException(Const.ReturnCode.ERROR, "应用为空!");
 		}
 		appService.save(app);
 		return new ResponseInfo();

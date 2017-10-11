@@ -10,12 +10,22 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>app-jund-basis-core</artifactId>
+    <artifactId>app-jund-basis-apis</artifactId>
 
     <dependencies>
         <dependency>
+            <groupId>com.jund.basis</groupId>
+            <artifactId>app-jund-basis-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>com.jund.framework</groupId>
-            <artifactId>app-jund-framework-jpa</artifactId>
+            <artifactId>app-jund-framework-security</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jund.framework</groupId>
+            <artifactId>app-jund-framework-test</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
